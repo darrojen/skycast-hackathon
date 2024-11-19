@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="menu.html" class="icon"><i class='bx bx-chevron-left'></i></a>
+</div>
+  <div id="rate-us-page">
+    <h1>Rate Us</h1>
+    <p>We value your feedback! Please rate your experience.</p>
+    
+    <!-- Star Rating -->
+    <div class="star-rating">
+      <span data-value="1" class="star">&#9733;</span>
+      <span data-value="2" class="star">&#9733;</span>
+      <span data-value="3" class="star">&#9733;</span>
+      <span data-value="4" class="star">&#9733;</span>
+      <span data-value="5" class="star">&#9733;</span>
+    </div>
+
+    <!-- Feedback Form -->
+    <textarea id="feedback" placeholder="Write your feedback here..."></textarea>
+    <button id="submit-rating">Submit</button>
+
+    <!-- Success Message -->
+    <div id="success-message" class="hidden">
+      <p>Thank you for your feedback!🤗</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
