@@ -5,17 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/skycast/styles.css">
+    <!-- <link rel="stylesheet" href="/style.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body class="call-us">
-    <div class="nav-bar">
+    <header class="nav-top">
+        <img class="logo" src="/Images/Images/sky logo.png" alt="#" />
+        <div class="nav">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/skycast/about.html">About</a></li>
+                <li><a href="/skycast/emergency.html">Emergency</a></li>
+                <li><a href="/skycast/locate.html">Locate</a></li>
+                <li><a href="/skycast/rate.html">Rate</a></li>
+            </ul>
+        </div>
+        <a href="/skycast/menu.html"><img class="hamburger" src="/Images/Images/Menu.png" alt="#" /></a>
+    </header>
+    <!-- <div class="nav-bar">
         <a href="menu.html" class="icon"><i class='bx bx-chevron-left'></i></a>
-    </div>
+    </div> -->
 
     <div class="container">
-        <h1>Emergency Calls📞</h1>
+        <h1>Emergency Calls<span>📞</span></h1>
 
         <div class="section">
             <h2>Hospitals</h2>
@@ -65,6 +79,42 @@
             </div>
         </div>
     </div>
+    <style>
+        @media(max-width: 480px) {
+            .nav {
+                display: none;
+            }
+
+            .container h1 {
+                width: 350px !important;
+                font-size: 20px;
+                /* padding: 5px 5px 5px 5px; */
+                margin-left: 47px;
+            }
+        }
+
+        .hamburger {
+            width: 40px;
+            height: auto;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            display: block;
+        }
+
+
+        @media(max-width: 480px) {
+            .hamburger {
+                position: absolute;
+            }
+        }
+
+        @media(min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
 </body>
 
 </html>
