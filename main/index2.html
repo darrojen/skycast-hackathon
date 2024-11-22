@@ -11,18 +11,70 @@
 </head>
 
 <body>
+  <section>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Menu Page</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="/style.css" />
+      <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+
+    <body id="menuPage">
+      <header>
+
+        <div class="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/SkyCast/about.html">About</a></li>
+            <li><a href="/SkyCast/emergency.html">Emergency</a></li>
+            <li><a href="/SkyCast/locate.html">Locate</a></li>
+            <li><a href="/SkyCast/rate.html">Rate</a></li>
+          </ul>
+        </div>
+        <!-- <img class="hamburger" src="/Images/Menu.png" alt="#" /> -->
+      </header>
+      <div class="nav-bar">
+        <a href="/index.html" class="icon"><i class='bx bx-chevron-left'></i></a>
+      </div>
+      <div class="menu-container">
+        <!-- <div class="header">
+                <h4><span>🌖Change theme</span></h4>
+                <div class="theme-toggle">
+
+                    <input type="checkbox" id="themeSwitch">
+                </div>
+            </div> -->
+        <h4><a href="locate.html" style="text-decoration:none;
+        color:#555;"><span>🌍</span>Location</h4>
+        <h4><a href="emergency.html" style="text-decoration:none;
+        color:#555;"><span>📞</span>Emergency</h4>
+        <h4><a href="about.html" style="text-decoration:none;
+        color:#555;"><span>💡About Us</span></h4>
+        <h4><a href="rate.html" style="text-decoration:none;
+        color:#555;"><span>⭐</span>Rate Us</h4>
+        <!-- <div class="below-page">
+          <p><i>@copy; 2024 Dynamic Devs</i></p>
+        </div> -->
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+  </section>
   <header>
     <img class="logo" src="/Images/Images/sky logo.png" alt="#" />
     <div class="nav">
       <ul>
-        <li><a href="/main/index2.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/SkyCast/about.html">About</a></li>
         <li><a href="/SkyCast/emergency.html">Emergency</a></li>
         <li><a href="/SkyCast/locate.html">Locate</a></li>
         <li><a href="/SkyCast/rate.html">Rate</a></li>
       </ul>
     </div>
-    <img class="hamburger" src="/Images/Menu.png" alt="#" />
+    <a href="/SkyCast/menu.html"><img class="hamburger" src="/Images/Images/Menu.png" alt="#" /></a>
   </header>
   <div class="welcome">
     <!-- <input placeholder="Enter your Location" class="local" type="text" /> -->
@@ -37,14 +89,16 @@
     <button class="start">Let's get started!</button>
   </div>
   <div class="home">
-    <div class="search">
-      <label for="">Find Weather Forcast</label>
-      <input id="input" type="text" placeholder="Enter Location" />
-      <img class="vector" src="/Images/Images/Vector.png" alt="#" />
+    <div class="search signal">
+      <form id="search" action=""><label for="">Find Weather Forcast</label>
+        <input id="input" type="text" placeholder="Enter Location" />
+        <div class="vectors"> <button type="submit"><img class="vector" src="/Images/Images/Vector.png"
+              alt="#" /></button></div>
+      </form>
       <!-- <i class="fa fa-search"></i> -->
     </div>
     <div class="hero">
-      <div>
+      <div class="containers">
         <div class="state">
           <p>Ebonyi</p>
         </div>
@@ -54,7 +108,7 @@
           <p>15&deg;</p>
           <span class="animated"> </span>
         </div>
-        <img class="weather" src="../amcharts_weather_icons_1.0.0/animated/cloudy-day-2.svg" alt="#" />
+        <img class="weather" src="../amcharts_weather_icons_1.0.0/animated/cloudy-day-2.svg" alt="icon" />
         <div>
           <p class="condition">Clear</p>
         </div>
@@ -103,7 +157,7 @@
   <div class="map"></div>
 
   <footer></footer>
-  <script src="./script2.js"></script>
+  <script src="script2.js"></script>
 </body>
 
 </html>

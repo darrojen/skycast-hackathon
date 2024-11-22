@@ -87,6 +87,7 @@ start.addEventListener("click", () => {
   );
 });
 function displayWeather(data) {
+  console.log({ data });
   const temperature = data.current.temp_c;
   const weatherDescription = data.current.condition.text;
   const city = data.location.name;
@@ -113,7 +114,7 @@ function displayWeather(data) {
   const wind = document.querySelector(".wind");
   const cloud = document.querySelector(".weather");
 
-  const tem = temperature + "°";
+  const tem = temperature + "°C";
   stat.textContent = state;
   region.textContent = country;
   temp.textContent = tem;
@@ -126,30 +127,57 @@ function displayWeather(data) {
   // cloud.src = icon;
 
   const weatherIconMap = {
-    "clear-day": "/Images/svg/clear-day.svg",
+    clear: "/Images/svg/clear-day.svg",
     "clear-night": "/Images/svg/clear-night.svg",
-    'cloudy': "/Images/svg/cloudy.svg",
-    "partly-cloudy-day": "/Images/svg/partly-cloudy-day.svg",
-    "partly-cloudy-night": "/Images/svg/partly-cloudy-night.svg",
-    'rain': "/Images/svg/rain.svg",
-    'snow': "/Images/svg/snow.svg",
-    'fog': "/Images/svg/fog.svg",
-    'thunderstorms': "/Images/svg/thunderstorms.svg",
-    'wind': "/Images/svg/wind.svg",
-    'hail': "/Images/svg/hail.svg",
-    'dust': "/Images/svg/dust.svg",
-    'extreme': "/Images/svg/extreme.svg",
+    sunny: "/Images/svg/sun-hot.svg",
+    cloudy: "/Images/svg/cloudy.svg",
+    overcast: "/Images/svg/overcast-day.svg",
+    "partly cloudy": "/Images/svg/partly-cloudy-day.svg",
+    mist: "/Images/svg/mist.svg",
+    rain: "/Images/svg/rain.svg",
+    snow: "/Images/svg/snow.svg",
+    fog: "/Images/svg/fog.svg",
+    thunderstorms: "/Images/svg/thunderstorms.svg",
+    wind: "/Images/svg/wind.svg",
+    hail: "/Images/svg/hail.svg",
+    dust: "/Images/svg/dust.svg",
+    extreme: "/Images/svg/extreme.svg",
+    blizzard: "/Images/svg/extreme-snow.svg",
   };
 
-  function getWeatherIcon(condition) {
-    const defaultIcon = "/Images/svg/not-available.svg";
-    return weatherIconMap[condition] || defaultIcon;
+  const keywordToKeyMap = {
+    clear: ["clear", "bright", "sunny"],
+    "clear-night": ["clear-night", "night clear"],
+    sunny: ["sunny", "hot", "bright sun"],
+    cloudy: ["cloudy", "clouds", "overcast"],
+    overcast: ["overcast", "gloomy"],
+    "partly cloudy": ["partly cloudy", "partly sunny", "some clouds"],
+    mist: ["mist", "haze", "foggy mist"],
+    rain: ["rain", "showers", "raining"],
+    snow: ["snow", "snowing", "partly snow", "snow day"],
+    fog: ["fog", "foggy"],
+    thunderstorms: ["thunderstorms", "storm", "lightning"],
+    wind: ["wind", "breezy", "windy"],
+    hail: ["hail", "hailstorm"],
+    dust: ["dust", "dusty"],
+    extreme: ["extreme", "severe"],
+    blizzard: ["blizzard", "heavy snow"],
+  };
+
+  function getWeatherIcon(description) {
+    const normalizedDesc = description.toLowerCase().trim();
+
+    for (const [key, keywords] of Object.entries(keywordToKeyMap)) {
+      if (keywords.some((keyword) => normalizedDesc.includes(keyword))) {
+        return weatherIconMap[key];
+      }
+    }
+
+    return "/Images/svg/clear-day";
   }
 
-  const condition = data.current.condition.text.toLowerCase();
-  // const condition = data.current.condition.text.toLowerCase() + "-day";
+  const condition = data.current.condition.text;
   const weatherIcon = getWeatherIcon(condition);
-  console.log(weatherIcon);
   cloud.src = weatherIcon;
 }
 function stopWatchingLocation() {
@@ -161,7 +189,8 @@ function stopWatchingLocation() {
     clearInterval(weatherInterval);
   }
 }
-document.querySelector(".vector").addEventListener("click", async () => {
+document.querySelector("#search").addEventListener("submit", async (e) => {
+  e.preventDefault();
   loader.style.display = "block";
   home.style.display = "none";
   welcome.style.display = "none";
