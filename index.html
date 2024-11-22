@@ -2,136 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyCast</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h1>WeatherWise</h1>
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="getWeatherBtn">Get Weather</button>
-        <div id="weatherResult"></div>
-    </div>
-
-    <script src="./script.js"></script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyCast</title>
+  <title>Skycast</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 
 <body>
+  <section>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Menu Page</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="/style.css" />
+      <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+
+    <body id="menuPage">
+      <header>
+
+        <div class="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/skycast/about.html">About</a></li>
+            <li><a href="/skycast/emergency.html">Emergency</a></li>
+            <li><a href="/skycast/locate.html">Locate</a></li>
+            <li><a href="/skycast/rate.html">Rate</a></li>
+          </ul>
+        </div>
+        <!-- <img class="hamburger" src="/Images/Menu.png" alt="#" /> -->
+      </header>
+      <div class="nav-bar">
+        <a href="/index.html" class="icon"><i class='bx bx-chevron-left'></i></a>
+      </div>
+      <div class="menu-container">
+        <!-- <div class="header">
+                <h4><span>🌖Change theme</span></h4>
+                <div class="theme-toggle">
+
+                    <input type="checkbox" id="themeSwitch">
+                </div>
+            </div> -->
+        <h4><a href="locate.html" style="text-decoration:none;
+        color:#555;"><span>🌍</span>Location</h4>
+        <h4><a href="emergency.html" style="text-decoration:none;
+        color:#555;"><span>📞</span>Emergency</h4>
+        <h4><a href="about.html" style="text-decoration:none;
+        color:#555;"><span>💡About Us</span></h4>
+        <h4><a href="rate.html" style="text-decoration:none;
+        color:#555;"><span>⭐</span>Rate Us</h4>
+        <!-- <div class="below-page">
+          <p><i>@copy; 2024 Dynamic Devs</i></p>
+        </div> -->
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+  </section>
   <header>
-    <div class="nav">
-      <!-- <ul>
-        <li><a href="/main/index2.html">Home</a></li>
-        <li><a href="/SkyCast/about.html">About Us</a></li>
-        <li><a href="/SkyCast/emergency.html">Emergency</a></li>
-        <li><a href="/SkyCast/locate.html">Locate</a></li>
-        <li><a href="/SkyCast/rate.html">Rate Us</a></li>
-      </ul> -->
-    </div>
     <img class="logo" src="/Images/Images/sky logo.png" alt="#" />
+    <div class="nav">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/skycast/about.html">About</a></li>
+        <li><a href="/skycast/emergency.html">Emergency</a></li>
+        <li><a href="/skycast/locate.html">Locate</a></li>
+        <li><a href="/skycast/rate.html">Rate</a></li>
+      </ul>
+    </div>
+    <a href="/skycast/menu.html"><img class="hamburger" src="/Images/Images/Menu.png" alt="#" /></a>
   </header>
   <div class="welcome">
     <!-- <input placeholder="Enter your Location" class="local" type="text" /> -->
     <!-- <button class="save" method="post">Save</button> -->
     <div class="well">
-      <h2>Welcome to SkyCast!</h2>
+      <h2>Welcome to skycast!</h2>
       <p>
-        Plan your journeys with confidence. Get accurate forecasts, real-time updates, and alerts for any
-        weather
+        Plan your journeys with confidence. Get accurate forecasts, real-time updates, and alerts for any weather
         changes.
       </p>
     </div>
     <button class="start">Let's get started!</button>
-    <div class="home">
-      <div class="search">
-        <label for="">Find Weather Forcast</label>
+  </div>
+  <div class="home">
+    <div class="search signal">
+      <form id="search" action=""><label for="">Find Weather Forcast</label>
         <input id="input" type="text" placeholder="Enter Location" />
-        <img class="vector" src="/Images/Images/Vector.png" alt="#" />
-      </div>
-      <div class="hero">
+        <div class="vectors"> <button type="submit"><img class="vector" src="/Images/Images/Vector.png"
+              alt="#" /></button></div>
+      </form>
+      <!-- <i class="fa fa-search"></i> -->
+    </div>
+    <div class="hero">
+      <div class="containers">
+        <div class="state">
+          <p>Ebonyi</p>
+        </div>
+        <span><img class="locator" src="/Images/Images/locator.png" alt="#" /></span>
+        <p class="country">Nigeria</p>
+        <div class="temp">
+          <p>15&deg;</p>
+          <span class="animated"> </span>
+        </div>
+        <img class="weather" src="../amcharts_weather_icons_1.0.0/animated/cloudy-day-2.svg" alt="icon" />
         <div>
-          <div class="state">
-            <p>Ebonyi</p>
-          </div>
-          <span><img class="locator" src="/Images/Images/locator.png" alt="#" /></span>
-          <p class="country">Nigeria</p>
-          <div class="temp">
-            <p>15&deg;</p>
-            <span class="animated"> </span>
-          </div>
-          <img class="weather" src="../amcharts_weather_icons_1.0.0/animated/cloudy-day-2.svg" alt="#" />
-          <div>
-            <p class="condition">Clear</p>
-          </div>
-          <div class="date">
-            <p>Monday 11 November</p>
-          </div>
-          <hr />
+          <p class="condition">Clear</p>
         </div>
-        <div class="container">
-          <h3 class="highlight">
-            <p>Today's Highlights</p>
-          </h3>
-          <div class="box">
-            <div class="sub">
-              <p class="attri">UV Index</p>
-              <div class="value">
-                <p class="uv">5</p>
-              </div>
+        <div class="date">
+          <p>Monday 11 November</p>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <h3 class="highlight">
+          <p>Today's Highlights</p>
+        </h3>
+        <div class="box">
+          <div class="sub">
+            <p class="attri">UV Index</p>
+            <div class="value">
+              <p class="uv">5</p>
             </div>
-            <div class="sub">
-              <p class="attri">Humidity(%)</p>
-              <div class="value">
-                <p class="humidity">12%</p>
-              </div>
+          </div>
+          <div class="sub">
+            <p class="attri">Humidity(%)</p>
+            <div class="value">
+              <p class="humidity">12%</p>
             </div>
-            <div class="sub">
-              <p class="attri">Pressure(inHg)</p>
-              <div class="value">
-                <p class="pressure">105<span>inHg</span></p>
-              </div>
+          </div>
+          <div class="sub">
+            <p class="attri">Pressure(inHg)</p>
+            <div class="value">
+              <p class="pressure">105<span>inHg</span></p>
             </div>
-            <div class="sub">
-              <p class="attri">Wind Status(kph)</p>
-              <div class="value">
-                <p class="wind">7.70<span>kph</span></p>
-              </div>
+          </div>
+          <div class="sub">
+            <p class="attri">Wind Status(kph)</p>
+            <div class="value">
+              <p class="wind">7.70<span>kph</span></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="loading">
-      <img class="load" src="/Images/Images/icons8-dots-loading.gif" alt="Loading..." />
-    </div>
+  </div>
+  <div class="loading">
+    <img class="load" src="/Images/Images/icons8-dots-loading.gif" alt="Loading..." />
+  </div>
 
-    <footer></footer>
-    <script src="./script2.js"></script>
+  <div class="map"></div>
+
+  <footer></footer>
+  <script src="script.js"></script>
 </body>
 
-</html> -->
+</html>
