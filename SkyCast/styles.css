@@ -1,10 +1,12 @@
 /* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color:#f7f5f5;
-  color: #333;
+  background-color: #f7f5f5;
+  color: #777;
 }
 
 /* Targeting only the rate-us page */
@@ -14,13 +16,18 @@ body {
   padding: 20px;
   background: #f7f5f5;
   border-radius: 15px;
-  box-shadow: 7px 7px 7px 7px rgba(86, 84, 84, 0.1);
+  box-shadow: 3px 3px 3px 3px rgba(151, 148, 148, 0.821);
   text-align: center;
 }
 
 #rate-us-page h1 {
   color: #444;
   margin-bottom: 10px;
+  background-color: #dad4d4f8;
+  border-radius: 15px;
+  width: 230px;
+  margin-left: 185px;
+  box-shadow: 0px 2px 2px 0px rgba(45, 44, 44, 0.821);
 }
 
 #rate-us-page p {
@@ -54,6 +61,7 @@ textarea#feedback {
   border: 1px solid #f5f5f5;
   border-radius: 4px;
   padding: 10px;
+  border-color: black;
   margin-bottom: 20px;
   font-size: 14px;
   resize: none;
@@ -67,6 +75,7 @@ button#submit-rating {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: 0.5s ease-in-out;
 }
 
 button#submit-rating:hover {
@@ -84,11 +93,10 @@ button#submit-rating:hover {
   margin-top: 20px;
 }
 
-
 /* Basic styles for layout */
- .menu-page{
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.menu-page {
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  transition: 0.3s ease, color 0.3s ease;
   padding: 20px;
   margin: 0;
 }
@@ -104,7 +112,7 @@ button#submit-rating:hover {
   margin: 50px auto;
   padding: 20px;
   background: #f7f5f5;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 3px 3px rgba(151, 148, 148, 0.821);
   border-radius: 8px;
 }
 
@@ -114,34 +122,74 @@ button#submit-rating:hover {
   align-items: center;
   width: 100%;
 }
-
+.nav-top {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  gap: 200px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  z-index: 10;
+}
+.container {
+  margin-top: 0px !important;
+}
+.container h1 {
+  margin-top: 100px;
+}
+.logo {
+  width: 100px;
+}
 /* Style for headings */
+.nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  right: 180px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  font-weight: 700;
+}
+
 h4 {
   font-size: 25px;
-  margin-top:20px;
-  margin-bottom:30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   color: #555;
 }
 h4:nth-of-type(1) {
-margin-bottom:12px;
+  margin-bottom: 12px;
 }
-h4:nth-of-type(2){
-   margin-top:30px;
+h4:nth-of-type(2) {
+  margin-top: 30px;
+}
 
-}
-h4:nth-of-type(3) a:hover{
-  color:#0ef;
-  transition: .4s;
+h4:nth-of-type(3) a:hover {
+  color: #0ef;
+  transition: 0.4s;
   text-shadow: 0 0 30px #0ef;
 }
-h4:nth-of-type(4) a:hover{
-  color:#0ef;
-  transition: .4s;
+h4:nth-of-type(1) a:hover {
+  color: #0ef;
+  transition: 0.4s;
   text-shadow: 0 0 30px #0ef;
 }
-h4:nth-of-type(5) a:hover{
-  color:#0ef;
-  transition: .4s;
+h4:nth-of-type(2) a:hover {
+  color: #0ef;
+  transition: 0.4s;
+  text-shadow: 0 0 30px #0ef;
+}
+h4:nth-of-type(4) a:hover {
+  color: #0ef;
+  transition: 0.4s;
   text-shadow: 0 0 30px #0ef;
 }
 
@@ -189,31 +237,21 @@ input[type="checkbox"]:before {
   transition: 0.3s;
 }
 
-input[type="checkbox"]:checked:before {
-  left: 22px;
-}
-.theme-toggle{
-  display:flex;
-  justify-content:flex-end;
-  margin-top:10px;
-}
-
-
 /* General Styling */
 .about-us {
-  font-family: Arial, sans-serif;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f7f5f5;
-  color:black;
+  color: black;
 }
 
 .about-container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 50px auto;
   padding: 20px;
   background: #f7f5f5;
-  box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 3px 3px rgba(151, 148, 148, 0.821);
   border-radius: 8px;
   text-align: center;
 }
@@ -221,6 +259,11 @@ input[type="checkbox"]:checked:before {
 h1 {
   font-size: 2.5rem;
   color: black;
+  background-color: #dad4d4f8;
+  border-radius: 15px;
+  width: 230px;
+  margin-left: 180px;
+  box-shadow: 0px 2px 2px 0px rgba(45, 44, 44, 0.821);
 }
 
 p {
@@ -230,30 +273,31 @@ p {
 }
 
 /* Social Media Icons Styling */
-.social-icons a{
+.social-icons a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #0ef;
+  border: 2px solid rgb(62, 1, 62);
   background: 50%;
   font-size: 20px;
-  color: #0ef;
+  color: rgb(62, 1, 62);
   text-decoration: none;
   margin: 30px 15px 30px 0;
   border-radius: 50%;
+  transition: 0.4s ease-in-out;
 }
 .social-icons a:hover {
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+  background: rgb(62, 1, 62);
+  color: white;
+  box-shadow: 0 0 20px rgb(62, 1, 62);
 }
 
 /* General Page Styling */
 .call-us {
-  font-family: Arial, sans-serif;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f7f5f5;
@@ -266,11 +310,16 @@ p {
   padding: 20px;
   text-align: center;
 }
+.container h1 {
+  width: 400px !important;
+  height: 60px;
+  padding-top: 16px;
+}
 
 .call-us h1 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color:#444 ;
+  color: #444;
 }
 
 .section {
@@ -286,11 +335,11 @@ h2 {
 /* Content Box Styling */
 .content-box {
   background-color: #f7f5f5;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 15px;
-  box-shadow:7px 7px 7px 7px rgba(0, 0, 0, 0.1); 
-  max-height: 400px; 
-  overflow-y: auto; 
+  box-shadow: 3px 3px 3px 3px rgba(151, 148, 148, 0.821);
+  max-height: 400px;
+  overflow-y: auto;
   text-align: left;
 }
 
@@ -311,12 +360,12 @@ li:last-child {
   border-bottom: none;
 }
 .nav-bar {
-  position:static;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
-  background-color:#87CEFA ;
+  background-color: #87cefa;
   display: flex;
   align-items: center;
   box-shadow: 0 3px rgba(0, 0, 0, 0.1);
@@ -339,10 +388,10 @@ li:last-child {
 .phone-link:hover {
   color: darkgreen;
 }
- 
- .below-page {
-  position: absolute; 
-  top: 92%; 
+
+.below-page {
+  position: absolute;
+  top: 92%;
   left: 0;
   width: 99%;
   height: 50px;
@@ -352,10 +401,102 @@ li:last-child {
   padding: 0 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
- }
+}
 
-  span{
-    opacity: 70%;
-    border: none;
+span {
+  border: none;
+}
+@media (max-width: 480px) {
+  .about-container h1 {
+    margin-left: 100px !important;
   }
-  
+  #rate-us-page h1 {
+    margin-left: 102px !important;
+  }
+  #menu-toggle {
+    margin-top: 70px;
+  }
+}
+
+#menu-toggle {
+  margin-top: 70px;
+  font-weight: 900px;
+  color: black;
+}
+
+/* General Styles */
+.map-page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.map-head {
+  background-color: #f7f5f5;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px rgba(151, 148, 148, 0.821);
+  position: static;
+  top: 109px;
+}
+
+.h2-head {
+  margin: 0;
+}
+
+#search-container {
+  margin-top: 10px;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 170px;
+  right: 10px !important;
+  height: 70px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-content ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 3px;
+  width: 100px;
+  background-color: rgb(50, 48, 48);
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 20px;
+}
+
+.menu-content li {
+  padding: 1px 0;
+}
+
+.menu-content button {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+}
