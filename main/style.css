@@ -4,7 +4,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* padding-left: 50px !important; */
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 header {
   position: fixed;
@@ -14,6 +16,9 @@ header {
   padding-top: 20px;
   padding-bottom: 10px;
   z-index: 10;
+}
+section{
+  display: none;
 }
 .nav {
   display: none;
@@ -24,34 +29,39 @@ body {
   padding: 0;
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
 }
-header {
-  position: fixed;
-  width: 100%;
-  background-color: rgb(250, 250, 250);
-  gap: 200px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  z-index: 10;
-}
 .nav {
   display: none;
-
 }
 ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   gap: 10px;
-  width: 250px;
+  width: 490px;
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 200px;
 }
 ul li a {
   text-decoration: none;
   color: black;
   width: 100%;
   font-weight: 700;
+}
+.start {
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+.start:hover {
+  background-color: black;
+  color: white;
+}
+.start:active {
+  background-color: rgb(170, 160, 160);
 }
 
 .loading {
@@ -109,6 +119,7 @@ ul li a {
 }
 .home {
   display: none;
+  /* background: url(/Images/Images/Start\ work_\ Finish\ work_.gif); */
 }
 .logo {
   width: 80px;
@@ -129,23 +140,39 @@ header span {
 .search {
   padding-top: 150px;
   padding-bottom: 120px;
-  display: grid;
+  display: inline-block;
   gap: 3px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url(/Images/head-bg.png);
+  background: url(/Images/Images/Start\ work_\ Finish\ work_.gif);
+  position: relative;
+}
+.signal{
+  background: url(/Images/Images/Start\ work_\ Finish\ work_.gif);
+  background-size: cover;
 }
 .search img {
-  width: 18px;
-  height: auto;
   position: absolute;
-  right: 115px;
-  top: 178px;
-  z-index: -1 1;
+  width: 18px !important;
+  right: 29px !important;
+  top: 90px !important;
+  transform: translateY(-50%) !important;
+  font-size: 16px;
+  color: #2e2c2c;
+}
+.hero{
+  padding-left: 40px;
+}
+.vectors {
+  opacity: 0%;
 }
 .search label {
   font-weight: 600;
+}
+.search form {
+  position: relative;
+  width: 500px !important;
 }
 .search input {
   width: 250px;
@@ -162,31 +189,32 @@ header span {
   font-weight: 600;
   padding-left: 40px;
   margin-bottom: 9px;
+  position: relative;
 }
 .locator {
   width: 20px;
   height: auto;
   position: absolute;
-  top: 323px;
-  left: 20px;
+  top: 370px !important;
+  left: 49px !important;
 }
 .temp {
   font-size: 60px;
-  padding-left: 105px;
+  padding-left: 100px;
   height: 230px;
 }
 .temp p {
   position: absolute;
   left: 115px;
   top: 440px;
-  z-index: -1;
+  z-index: 1;
 }
 .weather {
   position: absolute;
   width: 270px;
   height: 270px;
   top: 298px;
-  right: 20px;
+/* left: ; */
 }
 .country {
   font-size: 16px;
@@ -251,7 +279,55 @@ hr {
 .loading {
   display: none;
 }
-
+@media (max-width: 480px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px !important;
+  }
+  header {
+    width: 480px;
+  }
+  .box {
+    width: 400px !important;
+    padding-left: 10px !important;
+    gap: 50px !important;
+  }
+  .temp {
+    width: 300px !important;
+  }
+  .container {
+    width: 300px;
+    padding: 0 !important;
+  }
+  .containers {
+    width: fit-content;
+  }
+  #search {
+    width: 420px !important;
+  }
+  .highlight {
+    width: 200px;
+    padding: 0px 0px 0px 190px !important ;
+  }
+  .hamburger{
+    position: absolute;
+  }
+  .locator{
+    top: 360px !important;
+    left: 40px !important;
+  }
+  .temp p{
+    left: 50px;
+    z-index: 199;
+  }
+  .temp img{
+    z-index: -1;
+  }
+  .state{
+    padding-left: 20px !important;
+  }
+}
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -260,6 +336,9 @@ hr {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     right: 100px;
+  }
+  header {
+    right: 0px;
   }
   ul {
     gap: 30px;
@@ -282,9 +361,10 @@ hr {
     padding: 10px;
   }
   .search img {
-    width: 25px;
-    right: 180px;
-    top: 188px;
+    width: 25px !important;
+    top: 198px !important;
+    right: 179px !important;
+    transform: translateY(-50%) !important;
   }
   .search label {
     font-size: 22px;
@@ -336,7 +416,7 @@ hr {
     width: 500px;
   }
   .search img {
-    right: 310px;
+    right: 310px !important;
   }
   .locator {
     width: 20px;
@@ -379,7 +459,7 @@ hr {
   }
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   .container {
     max-width: 90%;
   }
@@ -399,15 +479,17 @@ hr {
     font-size: 30px;
   }
   .search img {
-    right: 516px;
-    top: 198px;
+    right: 520px !important;
+    top: 210px !important;
   }
   .locator {
     top: 349px;
   }
   ul {
-    gap: 50px;
+    gap: 30px;
+    padding-right: 5px;
     right: 100px;
+    width: 430px;
   }
   .save {
     right: 425px;
@@ -448,7 +530,7 @@ hr {
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-  height: 100vh;
+  height: 87vh;
   background: url(/Images/Images/UI\ Design\ \(tutorial\).gif);
   /* background: url(../Images/Start\ work_\ Finish\ work_.gif); */
   background-size: cover;
@@ -640,8 +722,16 @@ hr {
 .loading {
   display: none;
 }
+/* @media(max-width:480px){
+  section{
+    display: block;
+    position: absolute;
+    top: 200px;
+  }
+} */
 
-@media (min-width: 768px) {
+
+@media(min-width: 768px) {
   .hamburger {
     display: none;
   }
